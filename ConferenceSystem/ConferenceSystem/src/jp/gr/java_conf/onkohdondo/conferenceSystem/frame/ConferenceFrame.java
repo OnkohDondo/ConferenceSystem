@@ -1,7 +1,6 @@
 package jp.gr.java_conf.onkohdondo.conferenceSystem.frame;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -10,7 +9,6 @@ import java.awt.event.ActionListener;
 import java.awt.geom.Area;
 import java.util.ArrayList;
 
-import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
