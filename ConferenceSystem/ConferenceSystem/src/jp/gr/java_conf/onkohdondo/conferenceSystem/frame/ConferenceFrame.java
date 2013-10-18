@@ -136,8 +136,7 @@ public class ConferenceFrame extends JFrame {
 						conference.people.size());
 			}
 			for(int i=0;i<conference.people.size();i++){
-				System.out.println(0);
-				Person p=conference.people.get(i);
+				final Person p=conference.people.get(i);
 				JButton b=new JButton(){
 					private static final long serialVersionUID
 						= -6331661558457538999L;
@@ -146,9 +145,15 @@ public class ConferenceFrame extends JFrame {
 						graphics.setBackground(Color.WHITE);
 						graphics.clearRect(0, 0,
 								getHeight(), getHeight());
-						graphics.fillOval(getHeight()/2-30,30,
-								60,60);
-						System.out.println(getWidth());
+						graphics.setColor(Color.DARK_GRAY);
+						graphics.fillOval(getWidth()/2-15,5,30,30);
+						graphics.fillRoundRect(getWidth()/2-30, 40,
+								60, 200, 10, 10);
+						graphics.setColor(Color.WHITE);
+						System.out.println(p.getName());
+						
+						graphics.drawString(p.getName(),
+								getWidth()/2, getHeight()/2+20);
 					}
 				};
 				personButton.add(b);
@@ -194,7 +199,6 @@ public class ConferenceFrame extends JFrame {
 		private static final long serialVersionUID = 7618880842648944746L;
 //		private Graphics2D graphics;
 		ChatPanel(){
-			System.out.println();
 			repaint();
 		}
 		public void paintComponent(Graphics graphics){
