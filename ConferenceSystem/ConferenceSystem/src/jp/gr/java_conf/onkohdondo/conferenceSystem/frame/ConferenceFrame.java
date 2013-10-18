@@ -86,7 +86,7 @@ public class ConferenceFrame extends JFrame {
 			quit.setBounds(Conference.displayWidth-50,0,50,20);
 			quit.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent arg0) {
-					dispose();
+					System.exit(0);
 				}
 			});
 			quit.setToolTipText("閉じる");
