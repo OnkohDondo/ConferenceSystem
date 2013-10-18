@@ -139,12 +139,16 @@ public class ConferenceFrame extends JFrame {
 				System.out.println(0);
 				Person p=conference.people.get(i);
 				JButton b=new JButton(){
-					private static final long serialVersionUID = -6331661558457538999L;
+					private static final long serialVersionUID
+						= -6331661558457538999L;
 					public void paint(Graphics g){
 						Graphics2D graphics=(Graphics2D) g;
 						graphics.setBackground(Color.WHITE);
-						graphics.fillOval(getHeight()/2, getHeight()/2,
+						graphics.clearRect(0, 0,
 								getHeight(), getHeight());
+						graphics.fillOval(getHeight()/2-30,30,
+								60,60);
+						System.out.println(getWidth());
 					}
 				};
 				personButton.add(b);
